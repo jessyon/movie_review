@@ -1,0 +1,16 @@
+
+
+<div class="row">
+	<p id="search-result">
+		<%= "#{@movies.length} Movies are found as your search result." %>
+	</p>
+  <% @movies.each do |movie| %>
+
+    <div class="col-sm-6 co-md-3">
+      <div class="thumbnail">
+		<p><center><%= movie.title %></center></p>
+        <%= link_to (image_tag movie.image.url(:medium), class:'image'), movie %>
+      </div>
+    </div>
+  <% end %>
+</div>
